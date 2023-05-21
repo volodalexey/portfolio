@@ -9,7 +9,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^4.3.2"
+    "vite": "^4.3.2",
+    "vite-plugin-minify": "^1.5.2"
   },
   "repository": {
     "type": "git",

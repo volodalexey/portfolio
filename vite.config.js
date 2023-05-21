@@ -1,5 +1,6 @@
 import path from 'node:path'
 import { defineConfig } from 'vite'
+import { ViteMinifyPlugin } from 'vite-plugin-minify'
 
 export default defineConfig({
   root: path.join(__dirname, "src"),
@@ -9,5 +10,8 @@ export default defineConfig({
   },
   server: {
     port: 9120
-  }
+  },
+  plugins: [
+    ViteMinifyPlugin({}),
+  ],
 })
