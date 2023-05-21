@@ -11,6 +11,7 @@
     body {
       margin: 0;
       padding: 0;
+      font-family: 'Courier New', Courier, monospace;
     }
 
     .loader {
@@ -58,10 +59,455 @@
         transform: rotate(360deg);
       }
     }
+
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header h1 {
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      box-sizing: border-box;
+    }
+
+    .grid__cell {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    a.grid__item {
+      text-decoration: none;
+      box-shadow: 0px 0px 6px 2px rgba(102, 102, 102, 0.2);
+      border-radius: 1rem;
+    }
+
+    a.grid__item:hover {
+      box-shadow: 0px 0px 16px 6px rgba(22, 22, 22, 0.2);
+    }
+
+    .grid__item>video {
+      width: 100%;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+    }
+
+    .grid__item-title {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      color: #161616;
+    }
+
+    .grid__item-descr {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .grid__item-descr-label {
+      color: #666666;
+    }
+
+    .grid__item-descr-value {
+      color: #551a8b;
+      margin-left: 1rem;
+    }
+
+    @media only screen and (max-width: 400px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        padding: 0.5rem;
+      }
+
+      .grid__cell {
+        padding: 0.5rem;
+      }
+
+      .grid__item {
+        width: 150px;
+      }
+
+      .grid__item-title {
+        font-size: 1rem;
+        padding: 0.2rem;
+      }
+
+      .grid__item-descr {
+        font-size: 0.5rem;
+        padding: 0.2rem;
+      }
+    }
+
+    @media only screen and (min-width: 400px) and (max-width: 450px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        padding: 0.5rem;
+      }
+
+      .grid__cell {
+        padding: 1rem;
+      }
+
+      .grid__item {
+        width: 160px;
+      }
+
+      .grid__item-title {
+        font-size: 1rem;
+        padding: 0.2rem;
+      }
+
+      .grid__item-descr {
+        font-size: 0.5rem;
+        padding: 0.2rem;
+      }
+    }
+
+    @media only screen and (min-width: 450px) and (max-width: 500px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        padding: 0.5rem;
+      }
+
+      .grid__cell {
+        padding: 1rem;
+      }
+
+      .grid__item {
+        width: 180px;
+      }
+
+      .grid__item-title {
+        font-size: 1rem;
+        padding: 0.3rem;
+      }
+
+      .grid__item-descr {
+        font-size: 0.5rem;
+        padding: 0.4rem;
+      }
+    }
+
+    @media only screen and (min-width: 500px) and (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        padding: 1rem;
+      }
+
+      .grid__cell {
+        padding: 1rem;
+      }
+
+      .grid__item {
+        width: 200px;
+      }
+
+      .grid__item-title {
+        font-size: 1rem;
+        padding: 0.3rem;
+      }
+
+      .grid__item-descr {
+        font-size: 0.7rem;
+        padding: 0.3rem;
+      }
+    }
+
+    @media only screen and (min-width: 600px) and (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        padding: 1rem;
+      }
+
+      .grid__cell {
+        padding: 1.5rem;
+      }
+
+      .grid__item {
+        width: 240px;
+      }
+
+      .grid__item-title {
+        font-size: 1rem;
+        padding: 0.3rem;
+      }
+
+      .grid__item-descr {
+        font-size: 0.7rem;
+        padding: 0.3rem;
+      }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        padding: 1rem;
+      }
+
+      .grid__cell {
+        padding: 1.5rem;
+      }
+
+      .grid__item {
+        width: 300px;
+      }
+
+      .grid__item-title {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+      }
+
+      .grid__item-descr {
+        font-size: 1rem;
+        padding: 0.5rem;
+      }
+    }
+
+    @media only screen and (min-width: 992px) and (max-width: 1250px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        padding: 1.5rem;
+      }
+
+      .grid__cell {
+        padding: 1.5rem;
+      }
+
+      .grid__item {
+        width: 350px;
+      }
+
+      .grid__item-title {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+      }
+
+      .grid__item-descr {
+        font-size: 1rem;
+        padding: 0.5rem;
+      }
+    }
+
+    @media only screen and (min-width: 1250px) {
+      .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        padding: 1.5rem;
+      }
+
+      .grid__cell {
+        padding: 1.5rem;
+      }
+
+      .grid__item {
+        width: 350px;
+      }
+
+      .grid__item-title {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+      }
+
+      .grid__item-descr {
+        font-size: 1rem;
+        padding: 0.5rem;
+      }
+    }
   </style>
 </head>
 
 <body>
+  <header>
+    <h1>Alexey's portfolio <a href="https://github.com/volodalexey">@volodalexey</a></h1>
+  </header>
+  <section class="grid">
+    <!-- start of grid -->
+    <div class="grid__cell">
+      <a class="grid__item" href="https://volodalexey.github.io/simple-html5-rts-game/">
+        <video loop muted playsinline poster="./image/simple-html5-rts-game.jpg">
+          <source src="./video/simple-html5-rts-game.mp4" type="video/mp4" />
+        </video>
+        <div class="grid__item-title">RTS / Стратегия</div>
+        <div class="grid__item-descr">
+          <span class="grid__item-descr-label">Technologies / Технологии:</span>
+          <span class="grid__item-descr-value">PixiJS</span>
+        </div>
+      </a>
+    </div>
+    <div class="grid__cell">
+      <a class="grid__item" href="https://volodalexey.github.io/simple-html5-es-game/">
+        <video loop muted playsinline poster="./image/simple-html5-es-game.jpg">
+          <source src="./video/simple-html5-es-game.mp4" type="video/mp4" />
+        </video>
+        <div class="grid__item-title">Elven Scout / Орки</div>
+        <div class="grid__item-descr">
+          <span class="grid__item-descr-label">Technologies / Технологии:</span>
+          <span class="grid__item-descr-value">PixiJS</span>
+        </div>
+      </a>
+    </div>
+    <div class="grid__cell">
+      <a class="grid__item" href="https://volodalexey.github.io/simple-html5-vp-game/">
+        <video loop muted playsinline poster="./image/simple-html5-vp-game.jpg">
+          <source src="./video/simple-html5-vp-game.mp4" type="video/mp4" />
+        </video>
+        <div class="grid__item-title">Vertical Platformer / Платформер</div>
+        <div class="grid__item-descr">
+          <span class="grid__item-descr-label">Technologies / Технологии:</span>
+          <span class="grid__item-descr-value">PixiJS</span>
+        </div>
+      </a>
+    </div>
+    <div class="grid__cell">
+      <a class="grid__item" href="https://volodalexey.github.io/simple-html5-mrp-game/">
+        <video loop muted playsinline poster="./image/simple-html5-mrp-game.jpg">
+          <source src="./video/simple-html5-mrp-game.mp4" type="video/mp4" />
+        </video>
+        <div class="grid__item-title">Rooms / Комнаты</div>
+        <div class="grid__item-descr">
+          <span class="grid__item-descr-label">Technologies / Технологии:</span>
+          <span class="grid__item-descr-value">PixiJS</span>
+        </div>
+      </a>
+    </div>
+    <div class="grid__cell">
+      <a class="grid__item" href="https://volodalexey.github.io/simple-html5-sidescroller-game/">
+        <video loop muted playsinline poster="./image/simple-html5-sidescroller-game.jpg">
+          <source src="./video/simple-html5-sidescroller-game.mp4" type="video/mp4" />
+        </video>
+        <div class="grid__item-title">Sidescroller / Платформер</div>
+        <div class="grid__item-descr">
+          <span class="grid__item-descr-label">Technologies / Технологии:</span>
+          <span class="grid__item-descr-value">PixiJS</span>
+        </div>
+      </a>
+    </div>
+    <div class="grid__cell">
+      <a class="grid__item" href="https://volodalexey.github.io/simple-html5-td-game/">
+        <video loop muted playsinline poster="./image/simple-html5-td-game.jpg">
+          <source src="./video/simple-html5-td-game.mp4" type="video/mp4" />
+        </video>
+        <div class="grid__item-title">Tower Defence / Башенки</div>
+        <div class="grid__item-descr">
+          <span class="grid__item-descr-label">Technologies / Технологии:</span>
+          <span class="grid__item-descr-value">PixiJS</span>
+        </div>
+      </a>
+    </div>
+    <div class="grid__cell">
+      <a class="grid__item" href="https://volodalexey.github.io/simple-html5-pacman-game/">
+        <video loop muted playsinline poster="./image/simple-html5-pacman-game.jpg">
+          <source src="./video/simple-html5-pacman-game.mp4" type="video/mp4" />
+        </video>
+        <div class="grid__item-title">Pacman</div>
+        <div class="grid__item-descr">
+          <span class="grid__item-descr-label">Technologies / Технологии:</span>
+          <span class="grid__item-descr-value">PixiJS</span>
+        </div>
+      </a>
+    </div>
+    <div class="grid__cell">
+      <a class="grid__item" href="https://volodalexey.github.io/simple-html5-galaxian-game/">
+        <video loop muted playsinline poster="./image/simple-html5-galaxian-game.jpg">
+          <source src="./video/simple-html5-galaxian-game.mp4" type="video/mp4" />
+        </video>
+        <div class="grid__item-title">Galaxian</div>
+        <div class="grid__item-descr">
+          <span class="grid__item-descr-label">Technologies / Технологии:</span>
+          <span class="grid__item-descr-value">PixiJS</span>
+        </div>
+      </a>
+    </div>
+    <div class="grid__cell">
+      <a class="grid__item" href="https://volodalexey.github.io/ico-sphere/">
+        <video loop muted playsinline poster="./image/ico-sphere.jpg">
+          <source src="./video/ico-sphere.mp4" type="video/mp4" />
+        </video>
+        <div class="grid__item-title">ICO Sphere / Октаэдр</div>
+        <div class="grid__item-descr">
+          <span class="grid__item-descr-label">Technologies / Технологии:</span>
+          <span class="grid__item-descr-value">WebGL</span>
+        </div>
+      </a>
+    </div>
+    <div class="grid__cell">
+      <a class="grid__item" href="https://volodalexey.github.io/simple-html5-fighting-game/">
+        <video loop muted playsinline poster="./image/simple-html5-fighting-game.jpg">
+          <source src="./video/simple-html5-fighting-game.mp4" type="video/mp4" />
+        </video>
+        <div class="grid__item-title">Fighting / Драки</div>
+        <div class="grid__item-descr">
+          <span class="grid__item-descr-label">Technologies / Технологии:</span>
+          <span class="grid__item-descr-value">PixiJS</span>
+        </div>
+      </a>
+    </div>
+    <div class="grid__cell">
+      <a class="grid__item" href="https://volodalexey.github.io/simple-html5-mario-game/">
+        <video loop muted playsinline poster="./image/simple-html5-mario-game.jpg">
+          <source src="./video/simple-html5-mario-game.mp4" type="video/mp4" />
+        </video>
+        <div class="grid__item-title">Mario</div>
+        <div class="grid__item-descr">
+          <span class="grid__item-descr-label">Technologies / Технологии:</span>
+          <span class="grid__item-descr-value">PixiJS</span>
+        </div>
+      </a>
+    </div>
+    <div class="grid__cell">
+      <a class="grid__item" href="https://volodalexey.github.io/simple-html5-shooting-game/">
+        <video loop muted playsinline poster="./image/simple-html5-shooting-game.jpg">
+          <source src="./video/simple-html5-shooting-game.mp4" type="video/mp4" />
+        </video>
+        <div class="grid__item-title">Shooting / Стрелялки</div>
+        <div class="grid__item-descr">
+          <span class="grid__item-descr-label">Technologies / Технологии:</span>
+          <span class="grid__item-descr-value">PixiJS</span>
+        </div>
+      </a>
+    </div>
+    <div class="grid__cell">
+      <a class="grid__item" href="https://volodalexey.github.io/simple-html5-pokemon-game/">
+        <video loop muted playsinline poster="./image/simple-html5-pokemon-game.jpg">
+          <source src="./video/simple-html5-pokemon-game.mp4" type="video/mp4" />
+        </video>
+        <div class="grid__item-title">Pokemon</div>
+        <div class="grid__item-descr">
+          <span class="grid__item-descr-label">Technologies / Технологии:</span>
+          <span class="grid__item-descr-value">PixiJS</span>
+        </div>
+      </a>
+    </div>
+    <div class="grid__cell">
+      <a class="grid__item" href="https://volodalexey.github.io/simple-html5-farm-game/">
+        <video loop muted playsinline poster="./image/simple-html5-farm-game.jpg">
+          <source src="./video/simple-html5-farm-game.mp4" type="video/mp4" />
+        </video>
+        <div class="grid__item-title">Farm / Ферма</div>
+        <div class="grid__item-descr">
+          <span class="grid__item-descr-label">Technologies / Технологии:</span>
+          <span class="grid__item-descr-value">PixiJS</span>
+        </div>
+      </a>
+    </div>
+    <!-- end of grid -->
+  </section>
   <div class="loader">
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
       viewBox="0 0 100 100" xml:space="preserve">
@@ -78,9 +524,84 @@
   </div>
   <div class="hidden error-message"></div>
   <div class="hidden error-stack"></div>
-  <script async defer>
-    async function run() {
+  <script type="module">
+    const PICK_TIMEOUT = 5000;
+    const state = { mouseEntered: false, logger: false }
+    /**
+     * @param {HTMLVideoElement} video
+     */
+    function pauseVideo(video) {
+      video.pause()
+      if (state.logger) {
+        console.log(`video pause() ${video.children[0].getAttribute('src')}`)
+      }
+    }
+    /**
+     * @param {HTMLVideoElement} video
+     */
+    function playVideo(video) {
+      video.play()
+      if (state.logger) {
+        console.log(`video play() ${video.children[0].getAttribute('src')}`)
+      }
+    }
+    /**
+     * @param {HTMLVideoElement} video
+     * @param {HTMLVideoElement[]} videos
+     */
+    function playOneVideo(video, videos) {
+      videos.forEach(iVideo => {
+        if (video === iVideo) {
+          playVideo(iVideo)
+        } else {
+          pauseVideo(iVideo)
+        }
+      })
+    }
+    /**
+     * @param {HTMLVideoElement[]} videos
+     */
+    function pickRandomVideo(videos) {
+      if (state.mouseEntered) {
+        return
+      }
+      const cameraBounds = { left: 0, top: 0, right: innerWidth, bottom: innerHeight }
+      const viewableVideos = videos.filter(video => {
+        const videoBounds = video.getBoundingClientRect()
+        return videoBounds.bottom <= cameraBounds.bottom && videoBounds.top >= cameraBounds.top &&
+          videoBounds.left <= cameraBounds.right && videoBounds.right >= cameraBounds.left
+      })
+      if (state.logger) {
+        console.log(`viewableVideos ${viewableVideos.map(video => video.children[0].getAttribute('src')).join(', ')}`)
+      }
+      const viewableVideo = viewableVideos[Math.floor(Math.random() * viewableVideos.length)]
+      if (viewableVideo) {
+        if (state.logger) {
+          console.log(`viewableVideo ${viewableVideo.children[0].getAttribute('src')}`)
+        }
+        playOneVideo(viewableVideo, videos)
+      }
 
+      setTimeout(() => pickRandomVideo(videos), PICK_TIMEOUT)
+    }
+
+    async function run() {
+      const videos = [...document.querySelectorAll('.grid video')]
+      if (state.logger) {
+        console.log(`videos ${videos.map(video => video.children[0].getAttribute('src')).join(', ')}`)
+      }
+
+      videos.forEach(video => {
+        video.addEventListener('mouseenter', () => {
+          state.mouseEntered = true
+          playOneVideo(video, videos)
+        })
+        video.addEventListener('mouseleave', () => {
+          state.mouseEntered = false
+        })
+      })
+
+      setTimeout(() => pickRandomVideo(videos))
     }
     async function init() {
       const loader = document.querySelector('.loader')

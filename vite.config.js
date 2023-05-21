@@ -9,7 +9,8 @@ export default defineConfig({
     emptyOutDir: true
   },
   server: {
-    port: 9120
+    port: 9120,
+    host: true
   },
   plugins: [
     ViteMinifyPlugin({}),
