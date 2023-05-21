@@ -80,7 +80,7 @@
     .grid__cell {
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
     }
 
     a.grid__item {
@@ -108,8 +108,10 @@
 
     .grid__item-descr {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
+      align-items: center;
+      text-align: center;
       flex-wrap: wrap;
     }
 
@@ -119,7 +121,6 @@
 
     .grid__item-descr-value {
       color: #551a8b;
-      margin-left: 1rem;
     }
 
     @media only screen and (max-width: 400px) {
