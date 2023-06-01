@@ -17,7 +17,14 @@ export default defineConfig({
     {
       name: "Cleaning dist folder",
       async buildStart() {
-        const filePaths = await readdir(join(__dirname, 'dist'))
+        let filePaths = []
+        try {
+          filePaths = await readdir(join(__dirname, 'dist'))
+        } catch (err) {
+          if (err.code !== 'ENOENT') {
+            throw err
+          }
+        }
         for (const filePath of filePaths) {
           if (filePath.startsWith('.git')) {
             continue
