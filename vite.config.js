@@ -26,10 +26,11 @@ export default defineConfig({
           }
         }
         for (const filePath of filePaths) {
-          if (filePath.startsWith('.git')) {
+          if (filePath === '.git') {
             continue
           }
-          await rm(filePath, { force: true, recursive: true })
+          const fullFilePath = join(__dirname, 'dist', filePath)
+          await rm(fullFilePath, { recursive: true })
         }
       }
     },
